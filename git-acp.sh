@@ -1,5 +1,6 @@
 #!/bin/bash
 USER_LOCATION=$(pwd)
+cd $USER_LOCATION
 echo $USER_LOCATION
 echo What is your commit message?
 read commit_var
@@ -7,5 +8,7 @@ read commit_var
 git add .
 
 # commit the changes
-echo git commit -m " ' $commit_var ' "
+git commit -m " ' $commit_var ' "
 git push origin master
+
+echo " Done pushing "
